@@ -1,172 +1,141 @@
-<div class="container">  
-  <form id="contact" action="" method="post">
-    <h3>Colorlib Contact Form</h3>
-    <h4>Contact us for custom quote</h4>
-    <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required>
-    </fieldset>
-    <fieldset>
-      <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
-    </fieldset>
-    <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-    </fieldset>
-    <p class="copyright">Designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a></p>
-  </form>
-</div>
-<style>
-  @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Website</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
 
-body {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  font-size: 12px;
-  line-height: 30px;
-  color: #777;
-  background: #4CAF50;
-}
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
 
-.container {
-  max-width: 400px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
-#contact textarea,
-#contact button[type="submit"] {
-  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
-}
+        .nav-links li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
 
-#contact {
-  background: #F9F9F9;
-  padding: 25px;
-  margin: 150px 0;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
+        .nav-links li a:hover {
+            color: #ff6347;
+        }
 
-#contact h3 {
-  display: block;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #f4f4f4;
+        }
 
-#contact h4 {
-  margin: 5px 0 15px;
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-}
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
 
-fieldset {
-  border: medium none !important;
-  margin: 0 0 10px;
-  min-width: 100%;
-  padding: 0;
-  width: 100%;
-}
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
-#contact textarea {
-  width: 100%;
-  border: 1px solid #ccc;
-  background: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-}
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-#contact input[type="text"]:hover,
-#contact input[type="email"]:hover,
-#contact input[type="tel"]:hover,
-#contact input[type="url"]:hover,
-#contact textarea:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
-  border: 1px solid #aaa;
-}
+        .hero button:hover {
+            background-color: #ff6347;
+        }
 
-#contact textarea {
-  height: 100px;
-  max-width: 100%;
-  resize: none;
-}
+        /* Sections */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
 
-#contact button[type="submit"] {
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  background: #4CAF50;
-  color: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-  font-size: 15px;
-}
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
 
-#contact button[type="submit"]:hover {
-  background: #43A047;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-}
+        section p {
+            font-size: 1rem;
+        }
 
-#contact button[type="submit"]:active {
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-}
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MyWebsite</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-.copyright {
-  text-align: center;
-}
+    <section id="home" class="hero">
+        <h1>Welcome to My Website</h1>
+        <p>Creating modern and responsive web designs.</p>
+        <button id="learn-more">Learn More</button>
+    </section>
 
-#contact input:focus,
-#contact textarea:focus {
-  outline: 0;
-  border: 1px solid #aaa;
-}
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We provide web development and design services to bring your ideas to life.</p>
+    </section>
 
-::-webkit-input-placeholder {
-  color: #888;
-}
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>Web Design | Web Development | SEO Optimization</p>
+    </section>
 
-:-moz-placeholder {
-  color: #888;
-}
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@mywebsite.com | Phone: 123-456-7890</p>
+    </section>
 
-::-moz-placeholder {
-  color: #888;
-}
+    <footer>
+        <p>&copy; 2024 MyWebsite. All Rights Reserved.</p>
+    </footer>
 
-:-ms-input-placeholder {
-  color: #888;
-}
-  
-</style>
+    <script>
+        document.getElementById('learn-more').addEventListener('click', function () {
+            alert('Thank you for your interest! More features coming soon.');
+        });
+    </script>
+</body>
+</html>
+
